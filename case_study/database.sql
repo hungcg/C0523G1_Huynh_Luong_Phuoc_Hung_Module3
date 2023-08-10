@@ -1,4 +1,6 @@
-use case_study_data_base;
+create database case_study_database;
+
+use case_study_database;
 
 CREATE TABLE vi_tri (
     ma_vi_tri INT PRIMARY KEY AUTO_INCREMENT,
@@ -236,11 +238,5 @@ values
 
 
 
-
-
-
-	
-
- 
 
 
