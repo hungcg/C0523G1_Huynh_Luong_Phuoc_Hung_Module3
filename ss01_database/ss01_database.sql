@@ -2,18 +2,18 @@ create database ss01_database;
 
 use ss01_database;
 
-create table Student(
+create table class_room(
 	id int primary key auto_increment,
     `name` varchar(50)
     );
     
-insert into Student (`name`)
+insert into class_room (`name`)
 values ("Thiện"), ("Liên"), ("Lâm");
     
     select *
-    from student;
+    from class_room;
 
-    create table Teacher(
+    create table teacher(
    id int primary key auto_increment,
     `name` varchar(50),
     age int,
