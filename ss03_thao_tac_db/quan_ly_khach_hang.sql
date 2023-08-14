@@ -67,7 +67,8 @@ join product on product.p_ID = orderdetail.p_ID;
 
 -- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
 select customer.name_customer,product.p_name,orderdetail.od_QTY
-from customer left join `order` on customer.c_ID =  `order`.c_ID
+from customer 
+left join `order` on customer.c_ID =  `order`.c_ID
 left join orderdetail on orderdetail.o_ID = `order`.o_ID 
 left join product on product.p_ID = orderdetail.p_ID
 

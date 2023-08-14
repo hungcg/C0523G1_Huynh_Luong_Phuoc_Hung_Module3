@@ -37,8 +37,7 @@ dich_vu.ten_dich_vu, hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc,
 
 if (hop_dong_chi_tiet.so_luong is null, dich_vu.chi_phi_thue ,sum(dich_vu.chi_phi_thue + hop_dong_chi_tiet.so_luong * dich_vu_di_kem.gia)) 
 as 'tong_tien' 
-from khach_hang 
-left join  loai_khach on khach_hang.ma_loai_khach = loai_khach.ma_loai_khach
+from khach_hang left join  loai_khach on khach_hang.ma_loai_khach = loai_khach.ma_loai_khach
 left join hop_dong on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
 left join dich_vu on hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
 left join  hop_dong_chi_tiet on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
