@@ -46,6 +46,7 @@ left join  dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tie
 group by hop_dong.ma_hop_dong 
 order by khach_hang.ma_khach_hang, hop_dong.ma_hop_dong DESC;
 
+
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
 
