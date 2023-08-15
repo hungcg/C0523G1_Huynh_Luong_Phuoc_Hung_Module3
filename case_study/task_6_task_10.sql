@@ -28,28 +28,46 @@ order by ten_dich_vu desc;
 
 -- 8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
 -- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên.
+
+-- cách 1
 select khach_hang.ho_ten
 from khach_hang
 union
 select khach_hang.ho_ten
 from khach_hang;
+
+-- cách 2
 select distinct khach_hang.ho_ten
 from khach_hang;
+
+-- cách 3
 select khach_hang.ho_ten
 from khach_hang
 group by ho_ten;
 
 
+-- cách 4
+select ho_ten from khach_hang where ho_ten in (
+select khach_hang.ho_ten from khach_hang group by ho_ten having count(*) =1);
+
+
 -- Câu 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 
-select month(hop_dong.ngay_lam_hop_dong) ,count(ma_khach_hang) 
+select month(hop_dong.ngay_lam_hop_dong) as 'Tháng' ,count(ma_khach_hang) as 'Số lượng khách đặt trong tháng'
 from hop_dong
 where year(hop_dong.ngay_lam_hop_dong ) =2021
 group by month(hop_dong.ngay_lam_hop_dong)
-order by month(hop_dong.ngay_lam_hop_dong)
+order by month(hop_dong.ngay_lam_hop_dong);
 
 --  Câu 10.	Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
 --  Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
+
+select hop_dong.ma_hop_dong, hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc, hop_dong.tien_dat_coc,
+if(hop_dong_chi_tiet.so_luong is null,0,sum( hop_dong_chi_tiet.so_luong)) as 'so_luong_dich_vu_di_kem'
+from hop_dong
+left join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_hop_dong =hop_dong.ma_hop_dong
+left join dich_vu_di_kem on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+group by hop_dong.ma_hop_dong;
 
 
 
