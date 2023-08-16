@@ -65,10 +65,11 @@ delimiter //
 CALL display_products_ps();
 
 -- Tạo store procedure thêm một sản phẩm mới
--- Tạo store procedure sửa thông tin sản phẩm theo id
-delimiter //
+
+delimite//
 create procedure add_product_ps(
-id int,product_code varchar(50),
+id int,
+product_code varchar(50),
 product_name varchar(50),
 product_price int,
 product_amount int,
@@ -77,10 +78,38 @@ product_status BIT)
 begin
 insert into products values(
 id,product_code,product_name,product_price,product_amount,product_description,product_status);
-end //
+end//
 delimiter //
 call add_product_ps(7,"I123","ice-cream",6000,4,"for student",b'1');
 SELECT * From products;
+
+-- Tạo store procedure sửa thông tin sản phẩm theo id
+
+delimiter //
+create procedure update_product_ps(
+search_id int,
+new_code varchar(50),
+new_name varchar(50),
+new_price int,
+new_amount int,
+new_escription varchar(50),
+new_status BIT)
+begin
+update products
+set      
+product_code=new_code,
+product_name = new_name,
+product_price =new_price,
+product_amount =new_amount,
+product_description =new_escription,
+product_status =new_status
+where id = search_id;
+end //
+delimiter ;
+
+call update_product_ps(7,"I143","ice-ceam",5000,4,"for student",b'1');
+
+
 
 -- Tạo store procedure xoá sản phẩm theo id
 delimiter //
