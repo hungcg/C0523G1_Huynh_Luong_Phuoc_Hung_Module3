@@ -71,3 +71,77 @@ insert into instructor(`name`,birthday, salary)
  values ('nguyen van a','1981-12-12',1,8,null,'anv'),('tran van b','1981-12-12',1,5,null,'bnv');
 
  insert into instructor_class(class_id,instructor_id) values (1,1),(1,2),(2,1),(2,2),(3,1),(3,2);
+ 
+ 
+ 
+ 
+ 
+ -- 1. Hiện thị danh sách các lớp có học viên theo học 
+-- và số lượng học viên của mỗi lớp.
+
+select c.name, count(*) as "số lượng học viên"
+from class c
+join student s 
+on c.id = s.class_id
+group by c.id;
+
+-- 2. Tính điểm lớn nhất của mỗi các lớp
+select c.name, max(s.point) as "điểm lớn nhất"
+from class c
+join student s 
+on c.id = s.class_id
+group by c.id;
+
+-- 3. Tính điểm trung bình của từng lớp.
+set sql_mode = 1;
+select c.name, avg(s.point) as "điểm trung bình"
+from class c
+join student s 
+on c.id = s.class_id;
+
+-- 4. Lấy ra toàn bộ tên và ngày sinh các instructor và student ở CodeGym. 
+-- Lưu ý: sử dụng union
+select name, birthday
+from instructor
+union
+select name, birthday
+from student;
+
+-- 5. Lấy ra top 3 học viên có điểm cao nhất của trung tâm.
+select name, point
+from student
+order by point desc
+limit 3 offset 1;
+
+-- 6. Lấy ra các học viên có điểm số là cao nhất của trung tâm.
+-- điểm cao nhất ?
+-- số lượng hv có điểm = điểm cao nhất ?
+select name, point
+from student s
+where exists (
+				select *
+                from student
+                having s.point = max(student.point));
+
+select name, point
+from student s
+where point in (
+			select max(point)
+                from student
+);
+
+select quarter("1991-02-09");
+
+
+-- Đánh, xóa index cho cột name trong bảng student.
+
+create unique index student_name on student(`name`);
+alter table student drop index student_name;
+
+--  Tạo view chứa thông tin id và name của student.
+
+create view student_views as
+select name,id
+from student
+ 
+ 
