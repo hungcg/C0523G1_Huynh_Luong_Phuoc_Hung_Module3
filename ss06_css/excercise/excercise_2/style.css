@@ -1,0 +1,22 @@
+.body{
+    width: 500px;
+    height: auto;
+    text-align: justify;
+    font-family: "Times New Roman";
+}
+a{
+    font-size: 13px;
+}
+p{
+    text-indent: 40px;
+    font-size: 15px;
+}
+.title{
+    font-weight: bold;
+}
+.span-color{
+    color: cornflowerblue;
+}
+.span-color1{
+    color: #0000CC;
+}
