@@ -1,0 +1,81 @@
+#header{
+    font-family: 'Bodoni MT Condensed';
+    background: darkgrey;
+    line-height: 45px;
+    height: 80px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 2px;
+
+}
+#main{
+    height: 550px;
+    width: 65%;
+
+    float: left;
+    padding: 10px;
+
+}
+#sidebar{
+    padding: 10px;
+    height: 550px;
+    width:  35%;
+    float: left;
+    margin-bottom: 2px;
+
+}
+#footer{
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    clear: both;
+    background: darkgrey;
+
+}
+div{
+    box-sizing: border-box;
+}
+
+.box{
+    font-size: 15px;
+    background: orange;
+    border-radius: 10px ;
+    padding: 5px;
+}
+.bigbox{
+    border-radius: 10px;
+    background: black;
+    padding: 10px;
+}
+.phim{
+    font-size: 15px;
+    color: aliceblue;
+}
+#select{
+    font-size: 13px;
+    text-align: center;
+}
+#vid1 {
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+}
+#vid2{
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+}
+#vid3{
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+}
+
+#vidmain{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
