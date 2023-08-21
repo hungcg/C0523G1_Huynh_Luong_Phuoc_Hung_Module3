@@ -1,4 +1,4 @@
-div{
+div{box-sizing: border-box;
 
 }
 #header{
@@ -6,5 +6,132 @@ div{
     height: 70px;
 }
 #sidebar1{
+    background: darkslategrey;
+    width: 20%;
+    height: 550px;
+    float: left;
 
 }
+#main{
+    background: white;
+    width: 60%;
+    height: 550px;
+    float: left;
+}
+#sidebar2{
+    padding: 30px;
+    background: darkslategrey;
+    width: 20%;
+    height: 550px;
+    float: right;
+    justify-content: center;
+
+}
+#footer{
+   line-height: 100px;
+    text-align: center;
+    color: white;
+    height: 100px;
+    width: 100%;
+    background: black;
+    clear: both;
+}
+
+#menu{
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding:15px;
+    background-color: #000000;
+    top: 0;
+}
+
+#menu ul, #menu li{
+    padding:0;
+    margin:0;
+}
+
+#menu li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+#menu li a{
+    width:100px;
+    height: 30px;
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    color: white;
+}
+
+#menu ul ul li a{
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#menu li a:hover{
+    background-color: lightslategrey;
+}
+
+#menu ul ul{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    visibility: hidden;
+}
+
+#menu ul li:hover ul{
+    visibility: visible;
+}
+
+#login{
+    color: white;
+    padding: 5px;
+    text-align: right;
+}
+#welcome{
+    font-size: 50px;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+p,h1{
+    padding: 20px;
+}
+.but1{
+   display: block;
+    margin-top: auto;
+}
+#but1{
+    margin-left: 18px;
+    margin-top: 20px;
+    height: 70px;
+    width: 180px;
+}
+#but2{
+    margin-left: 18px;
+    margin-top: 20px;
+    height: 70px;
+    width: 180px;
+}
+hr{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+#img{
+
+    margin-right: 8px;
+    text-align: right;
+    height: 25px;
+    width: 20px;
+}
+
+
