@@ -1,0 +1,48 @@
+.picture {
+    height: 250px;
+    width: 240px;
+    float: left;
+    border-radius: 14px;
+    align-items: center;
+    margin: 20px 65px;
+    box-shadow: 10px 11px 12px whitesmoke;
+    transition-duration: 0.5s
+}
+
+.picture img {
+    border-radius: 14px;
+    width: 100%;
+    height: 60%;
+
+}
+
+.picture:hover {
+   scale: 1.1;
+    transition-duration: 0.5s;
+}
+
+
+.picture h4 {
+    text-align: center;
+    color: whitesmoke;
+    padding: 0;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 15px;
+}
+
+p {
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: bold;
+}
+
+body {
+    background: -webkit-repeating-linear-gradient(left, darkslategray,black);
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+h2,h4{
+    color: whitesmoke;
+}

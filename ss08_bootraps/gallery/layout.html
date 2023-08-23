@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-$END$
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="picture">
+    <a target="_blank" href="ech.jpg">
+        <img src="ech.jpg"/>
+    </a>
+    <h4>Ếch Xào Sả Ớt</h4>
+</div>
+<div class="picture">
+    <a target="_blank" href="bo.jpg">
+        <img src="bo.jpg"/></a>
+    <h4>Bò Nhúng Ớt</h4>
+</div>
+<div class="picture">
+    <a target="_blank" href="muc.jpg">
+        <img src="muc.jpg"/>
+    </a>
+        <h4>Mực Nướng Sa Tế</h4>
+</div>
+<div class="picture">
+    <a target="_blank" href="thit.jpg">
+        <img src="thit.jpg" />
+    </a>
+    <h4>Ba Chỉ Nướng Giòn Da</h4>
+</div>
+
+    <p>
+        This example use media queries to re-arrange the images on different screen sizes:
+        for screens larger than 700px wide, it will show four images side by side, for screens
+        smaller than 700px, it will show two images side by side. For screens smaller than 500px,
+        the images will stack vertically (100%).
+    </p>
+</div>
 </body>
 </html>
