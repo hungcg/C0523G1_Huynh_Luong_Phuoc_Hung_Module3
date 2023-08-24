@@ -3,10 +3,12 @@
     text-align: center;
     line-height: 50px;
 }
+
 .microsoft {
     border-right: 2px solid black;
     padding: 3px;
 }
+
 .content {
     padding: 90px;
 }
@@ -14,13 +16,32 @@
 a {
     text-decoration: none;
 }
+
 h4 {
     float: left;
 }
-#word,#word1{
+
+#word, #word1 {
     font-size: 30px;
     margin-top: 100px;
 }
-.card{
+
+.card {
+    box-shadow: black;
     margin-top: 50px;
+}
+
+.row {
+    border: black;
+    height: 50%;
+    margin-bottom: 50px;
+}
+
+.form-check {
+    margin: 5px -15px;
+}
+#carouselExample{
+    solid-color: black;
+    border-radius: 30%;
+    margin: 50px;
 }
