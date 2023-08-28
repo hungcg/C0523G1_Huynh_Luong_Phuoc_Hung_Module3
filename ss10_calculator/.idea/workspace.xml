@@ -5,67 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06699c84-e445-4796-8636-d6226b6ad38f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/example/calculator/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/service/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss09_web/src/main/java/com/example/service/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/customer/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/webapp/WEB-INF/displayCustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/.idea/bootstrap-5.3.1-dist.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap-5.3.1-dist/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss08_bootraps/landing_page/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss08_bootraps/landing_page/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss09_web/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss09_web/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss09_web/src/main/java/com/example/ss09_web/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss09_web/src/main/java/com/example/controller/CalculatorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss09_web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss09_web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CalculatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CalculatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/customer/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/customer/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/customer/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/java/com/example/ss10_jsp_jstl/service/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/webapp/WEB-INF/displayCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/webapp/displayCustomer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_jsp_jstl/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +23,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ss10_calculator" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,21 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/C0523G1_Huynh_Luong_Phuoc_Hung_Module3/ss10_jsp_jstl&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.79" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.79" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : com.example : ss10_calculator-1.0-SNAPSHOT.war">
           <settings>
@@ -210,6 +178,10 @@
       <option name="presentableId" value="Default" />
       <updated>1693208268150</updated>
       <workItem from="1693208269231" duration="675000" />
+      <workItem from="1693209103734" duration="390000" />
+      <workItem from="1693209604817" duration="1183000" />
+      <workItem from="1693215035337" duration="46000" />
+      <workItem from="1693216130274" duration="12000" />
     </task>
     <servers />
   </component>

@@ -9,10 +9,11 @@ public class CalculatorService {
         } else if (operator.equals("multiplication")) {
             return firstOperand * secondOperand;
         } else if (operator.equals("division")) {
-            try {
+            if (secondOperand == 0) {
+                throw new RuntimeException("can not devide zero baby");
+            } else {
                 Double result = firstOperand / secondOperand;
                 return result;
-            } catch (Exception e) {
             }
         }
         return null;
