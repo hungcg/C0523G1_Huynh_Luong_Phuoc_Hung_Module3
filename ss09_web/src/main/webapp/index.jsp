@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<form action="/calculator-servlet" method="post">
+<form action="/calculator" method="post">
   <label for="description">Product Description :</label>
   <input type="text" name="description" id="description" value="${description}"><br/>
   <label for="price">List Price :</label>
@@ -29,7 +29,7 @@
   <input type="number" name="discount" id="discount" value="${discount}"><br/>
   <button type="submit" class="btn btn-primary">Calculate Discount</button>
 </form>
-Discount Amount is : ${result}
+${result}
 
 </body>
 </html>
