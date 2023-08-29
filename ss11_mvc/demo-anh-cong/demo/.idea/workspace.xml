@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86f3334b-91f3-495c-adb5-30ecb8e28efe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10_calculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main/java/com/example/ss11_mvc/repository/ProductRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2UePxvk7BgDtTmfZYDCirNSjsPB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/C0523G1_Huynh_Luong_Phuoc_Hung_Module3/ss11_mvc/ss10",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.79" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.79" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="Gradle : com.example : demo-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___com_example___demo_1_0_SNAPSHOT_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : demo-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86f3334b-91f3-495c-adb5-30ecb8e28efe" name="Changes" comment="" />
+      <created>1693297324215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693297324215</updated>
+      <workItem from="1693297325410" duration="127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
