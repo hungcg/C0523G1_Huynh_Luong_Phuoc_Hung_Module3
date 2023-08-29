@@ -1,27 +1,21 @@
 package com.example.ss11_mvc.model;
 
 public class Product {
-
     private int id;
-    private String name;
-    private int price;
+    private String productName;
+    private double price;
     private String description;
+    private String producer;
 
-    private String supplier;
-
-    public Product(String name, int price, String description, String supplier) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.supplier = supplier;
+    public Product() {
     }
 
-    public Product(int id, String name, int price, String description, String supplier) {
+    public Product(int id, String productName, double price, String description, String producer) {
         this.id = id;
-        this.name = name;
+        this.productName = productName;
         this.price = price;
         this.description = description;
-        this.supplier = supplier;
+        this.producer = producer;
     }
 
     public int getId() {
@@ -32,19 +26,19 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -56,24 +50,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getSupplier() {
-        return supplier;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setSupplier(String supplier) {
-        this.supplier = supplier;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", supplier='" + supplier + '\'' +
-                '}';
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 }
-
-

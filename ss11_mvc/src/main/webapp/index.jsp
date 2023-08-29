@@ -6,7 +6,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<a href="/product" style="text-decoration: none">Product List</a>
+<a href="/products" style="text-decoration: none">Product List</a>
 
 <br/>
 

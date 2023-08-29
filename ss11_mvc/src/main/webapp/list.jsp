@@ -1,47 +1,47 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 8/29/2023
-  Time: 2:08 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
     <style>
+        a{
+            text-decoration: none;
+        }
         table{
-            border-collapse: collapse;
             background: cadetblue;
-            box-shadow: black;
+            border-collapse: collapse;
         }
     </style>
 </head>
 <body>
-<%--<a href="/product"></a>--%>
-<table border="1px">
-    <thead>
+<h1>Product</h1>
+<p>
+    <a href="/products?action=create">Create New Product</a>
+</p>
+<form method="post" action="/products?action=search">
+    <input type="text" name="search">
+    <input type="submit" value="Search">
+</form>
+<table border="1" >
     <tr>
-        <th>STT</th>
-        <th>Tên</th>
-        <th>Giá</th>
-        <th>Mô tả</th>
-        <th>Nhà sản xuất</th>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Description</td>
+        <td>Supplier</td>
+        <td>Edit</td>
+        <td>Delete</td>
     </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="p" items="${productList}" varStatus="count">
+    <c:forEach var="product" items="${products}" >
         <tr>
-            <td><c:out value="${count.count}"/></td>
-            <td><c:out value="${p.name}"/></td>
-            <td><c:out value="${p.price}"/></td>
-            <td><c:out value="${p.description}"/></td>
-            <td><c:out value="${p.supplier}"/></td>
-
+            <td>${product.getProductName()}</td>
+            <td>${product.getPrice()}</td>
+            <td>${product.getDescription()}</td>
+            <td>${product.getProducer()}</td>
+            <td><a href="/products?action=edit&id=${product.getId()}">Edit</a></td>
+            <td><a href="/products?action=delete&id=${product.getId()}">Delete</a></td>
         </tr>
     </c:forEach>
-    </tbody>
 </table>
+
 </body>
 </html>
