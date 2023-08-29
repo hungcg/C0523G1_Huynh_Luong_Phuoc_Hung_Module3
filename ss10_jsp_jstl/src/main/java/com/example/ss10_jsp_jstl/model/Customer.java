@@ -1,4 +1,4 @@
-package com.example.ss10_jsp_jstl.service;
+package com.example.ss10_jsp_jstl.model;
 
 public class Customer {
     private String name;
