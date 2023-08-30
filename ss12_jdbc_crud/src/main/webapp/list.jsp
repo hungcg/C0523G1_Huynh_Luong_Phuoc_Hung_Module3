@@ -26,9 +26,6 @@
     <title>User Management Application</title>
 </head>
 <body>
-<c:if test="${message != null}">
-    <span>${message}</span>
-</c:if>
     <h1><a href="/users">User Management</a></h1>
     <h2>
         <a href="/users?action=create" >Add New User</a>

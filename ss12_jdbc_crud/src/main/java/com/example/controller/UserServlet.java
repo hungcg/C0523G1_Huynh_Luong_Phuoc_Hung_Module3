@@ -107,8 +107,7 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
         userDAO.insertUser(newUser);
-        request.setAttribute("message", "Successful");
-        request.getRequestDispatcher("/create.jsp").forward(request,response);
+        response.sendRedirect("/users");
     }
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response)
@@ -117,10 +116,11 @@ public class UserServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
+
         User edituser = new User(id, name, email, country);
         userDAO.updateUser(edituser);
-        request.setAttribute("message", "Successful");
-        request.getRequestDispatcher("/edit.jsp").forward(request,response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/edit.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)

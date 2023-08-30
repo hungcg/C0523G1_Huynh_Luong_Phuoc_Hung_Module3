@@ -25,9 +25,6 @@
       <caption>
         <h2>Add New User</h2>
       </caption>
-      <c:if test="${message != null}">
-        <span style="color: brown; font-size: 50px">${message}</span>
-      </c:if>
       <tr>
         <th>User Name:</th>
         <td>
