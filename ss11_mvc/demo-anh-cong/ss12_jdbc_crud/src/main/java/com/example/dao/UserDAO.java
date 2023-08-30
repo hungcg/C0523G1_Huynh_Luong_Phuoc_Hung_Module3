@@ -1,8 +1,6 @@
 package com.example.dao;
 
 
-
-
 import com.example.model.User;
 
 import java.sql.*;
@@ -20,6 +18,9 @@ public class UserDAO implements IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+    private static final String SORT_BY_NAME = "SELECT * FROM users ORDER BY users.name;";
+        private static final String SEARCH_BY_COUNTRY = "select * from users where country like ?";
+//    private static final String SEARCH_BY_COUNTRY = "call findByCountry(?)";
 
     public UserDAO() {
     }
@@ -118,18 +119,6 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public List<User> search(String country) {
-        List<User> userList = new ArrayList<>();
-        List<User> List = this.selectAllUsers();
-        for (User users : List) {
-            if (users.getCountry().toLowerCase().contains(country.toLowerCase())) {
-                userList.add(users);
-            }
-        }
-        return userList;
-    }
-
-    @Override
     public User getUserById(int id) {
 
         User user = null;
@@ -151,4 +140,58 @@ public class UserDAO implements IUserDAO {
         return user;
     }
 
+    @Override
+    public List<User> sortByName() {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME);) {
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) {
+        }
+        return users;
+    }
+
+    @Override
+    public List<User> searchByCountry(String country) {
+        List<User> users = new ArrayList<>();
+//        try (Connection connection = getConnection();
+//             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);) {
+//            System.out.println(preparedStatement);
+//            ResultSet rs = preparedStatement.executeQuery();
+//            while (rs.next()) {
+//                int id = rs.getInt("id");
+//                String name = rs.getString("name");
+//                String email = rs.getString("email");
+//                String country = rs.getString("country");
+//                users.add(new User(id, name, email, country));
+//            }
+//        } catch (SQLException e) {
+//        }
+//        return users;
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);
+            preparedStatement.setString(1, country);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String countryid = resultSet.getString("country");
+                users.add(new User(id, name, email, countryid));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return users;
+    }
 }

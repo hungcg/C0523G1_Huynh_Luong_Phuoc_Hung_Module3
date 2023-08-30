@@ -1,9 +1,10 @@
 package com.example.controller;
 
 
-
 import com.example.dao.UserDAO;
 import com.example.model.User;
+import com.example.service.IUserService;
+import com.example.service.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
+    private IUserService userService = new UserService();
     private static final long serialVersionUID = 1L;
     private UserDAO userDAO;
 
@@ -40,7 +42,7 @@ public class UserServlet extends HttpServlet {
                     updateUser(request, response);
                     break;
                 case "search":
-                    searchUser(request, response);
+                    searchbycountry(request, response);
                     break;
             }
         } catch (SQLException ex) {
@@ -67,6 +69,9 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
+                case "sort":
+                    sortByName(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -74,6 +79,21 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+    }
+
+    private void searchbycountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String country = request.getParameter("country");
+        List<User> listUser = userService.searchByCountry(country);
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/search.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<User> listUser = userDAO.sortByName();
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/list.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)
@@ -108,7 +128,7 @@ public class UserServlet extends HttpServlet {
         User newUser = new User(name, email, country);
         userDAO.insertUser(newUser);
         request.setAttribute("message", "Successful");
-        request.getRequestDispatcher("/create.jsp").forward(request,response);
+        request.getRequestDispatcher("/create.jsp").forward(request, response);
     }
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response)
@@ -120,32 +140,19 @@ public class UserServlet extends HttpServlet {
         User edituser = new User(id, name, email, country);
         userDAO.updateUser(edituser);
         request.setAttribute("message", "Successful");
-        request.getRequestDispatcher("/edit.jsp").forward(request,response);
+        request.getRequestDispatcher("/edit.jsp").forward(request, response);
     }
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         userDAO.deleteUser(id);
-
         List<User> listUser = userDAO.selectAllUsers();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/list.jsp");
         dispatcher.forward(request, response);
     }
-
-    private void searchUser(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
-        List<User> Users = this.userDAO.search(country);
-        request.setAttribute("listUser", Users);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/list.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
+
+
 

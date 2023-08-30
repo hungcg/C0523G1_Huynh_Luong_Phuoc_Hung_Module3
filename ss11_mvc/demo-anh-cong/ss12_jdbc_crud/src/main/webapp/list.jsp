@@ -14,9 +14,16 @@
         a{
             text-decoration: none;
         }
-        *{
+        table{
+            border-collapse: collapse;
             background: lightseagreen;
             color: black;
+        }
+        td{
+            background: darkgoldenrod;
+        }
+        h4{
+            background: cornflowerblue;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
@@ -26,13 +33,13 @@
     <title>User Management Application</title>
 </head>
 <body>
-<c:if test="${message != null}">
-    <span>${message}</span>
-</c:if>
+<center>
     <h1><a href="/users">User Management</a></h1>
-    <h2>
-        <a href="/users?action=create" >Add New User</a>
-    </h2>
+</center>
+    <h4>
+        <a href="/users?action=create" >Add New User</a><br>
+        <a href="/users?action=sort" >Sort By Name</a>
+    </h4>
     <form method="post" action="/users?action=search">
         <input type="text" name="country">
         <input type="submit" value="search">
@@ -69,8 +76,6 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-<%--<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>--%>
 <script>
     $(document).ready(function () {
         $('#list').DataTable();

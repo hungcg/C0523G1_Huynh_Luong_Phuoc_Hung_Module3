@@ -1,7 +1,6 @@
 package com.example.dao;
 
 
-
 import com.example.model.User;
 
 import java.sql.SQLException;
@@ -18,9 +17,11 @@ public interface IUserDAO {
 
     public boolean updateUser(User user) throws SQLException;
 
-    List<User> search(String country);
-
     User getUserById(int id);
+
+    List<User> sortByName();
+
+    List<User> searchByCountry(String country);
 }
 
 
