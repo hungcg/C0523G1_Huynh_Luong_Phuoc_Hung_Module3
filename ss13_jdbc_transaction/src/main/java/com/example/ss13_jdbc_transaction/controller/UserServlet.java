@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.ss13_jdbc_transaction.controller;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
