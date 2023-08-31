@@ -1,6 +1,8 @@
-package user_dao;
+package com.example.ss13_jdbc_transaction.dao;
 
-import model.User;
+
+
+import com.example.ss13_jdbc_transaction.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
