@@ -44,7 +44,6 @@
         </thead>
         <tbody>
         <c:forEach var="user" varStatus="count" items="${listUser}">
-
             <tr>
                 <td><c:out value="${count.count}"/></td>
                 <td><a href="/users?action=view&id=${user.getId()}"><c:out value="${user.name}"/></a></td>

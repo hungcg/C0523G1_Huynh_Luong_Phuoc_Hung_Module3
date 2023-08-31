@@ -1,10 +1,10 @@
 package com.example.ss13_jdbc_transaction.model;
 
 public class User {
-    protected int id;
-    protected String name;
-    protected String email;
-    protected String country;
+    private int id;
+    private String name;
+    private String email;
+    private String country;
 
     public User(int id, String name, String email, String country) {
         this.id = id;

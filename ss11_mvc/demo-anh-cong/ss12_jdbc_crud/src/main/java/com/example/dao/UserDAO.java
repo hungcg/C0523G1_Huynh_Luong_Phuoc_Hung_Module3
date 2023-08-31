@@ -19,8 +19,8 @@ public class UserDAO implements IUserDAO {
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String SORT_BY_NAME = "SELECT * FROM users ORDER BY users.name;";
-        private static final String SEARCH_BY_COUNTRY = "select * from users where country like ?";
-//    private static final String SEARCH_BY_COUNTRY = "call findByCountry(?)";
+    private static final String SEARCH_BY_COUNTRY = "select * from users where country like ?";
+
 
     public UserDAO() {
     }
@@ -54,31 +54,12 @@ public class UserDAO implements IUserDAO {
         }
     }
 
-    @Override
-    public User selectUser(int id) {
-        User user = null;
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);) {
-            preparedStatement.setInt(1, id);
-            System.out.println(preparedStatement);
-            ResultSet rs = preparedStatement.executeQuery();
-
-            while (rs.next()) {
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                String country = rs.getString("country");
-                user = new User(id, name, email, country);
-            }
-        } catch (SQLException e) {
-        }
-        return user;
-    }
 
     @Override
     public List<User> selectAllUsers() {
         List<User> users = new ArrayList<>();
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS)) {
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
@@ -162,20 +143,6 @@ public class UserDAO implements IUserDAO {
     @Override
     public List<User> searchByCountry(String country) {
         List<User> users = new ArrayList<>();
-//        try (Connection connection = getConnection();
-//             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY);) {
-//            System.out.println(preparedStatement);
-//            ResultSet rs = preparedStatement.executeQuery();
-//            while (rs.next()) {
-//                int id = rs.getInt("id");
-//                String name = rs.getString("name");
-//                String email = rs.getString("email");
-//                String country = rs.getString("country");
-//                users.add(new User(id, name, email, country));
-//            }
-//        } catch (SQLException e) {
-//        }
-//        return users;
         Connection connection = getConnection();
         PreparedStatement preparedStatement = null;
         try {

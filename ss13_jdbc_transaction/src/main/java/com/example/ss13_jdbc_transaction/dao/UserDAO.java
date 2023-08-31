@@ -1,7 +1,6 @@
 package com.example.ss13_jdbc_transaction.dao;
 
 
-
 import com.example.ss13_jdbc_transaction.model.User;
 
 import java.math.BigDecimal;
@@ -10,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO implements IUserDAO{
+public class UserDAO implements IUserDAO {
     public List<User> listUser = new ArrayList<>();
 
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo";
@@ -45,11 +44,11 @@ public class UserDAO implements IUserDAO{
     public UserDAO() {
     }
 
-    protected Connection getConnection(){
+    protected Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcURL,jdbcUsername,jdbcPassword);
+            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -59,16 +58,17 @@ public class UserDAO implements IUserDAO{
     }
 
     @Override
-    public void insertUser(User user)throws SQLException {
+    public void insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
         try {
-            Connection connection = getConnection();PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
-            preparedStatement.setString(1,user.getName());
-            preparedStatement.setString(2,user.getEmail());
-            preparedStatement.setString(3,user.getCountry());
+            Connection connection = getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
             System.out.printf(String.valueOf(preparedStatement));
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
         }
 
@@ -84,11 +84,11 @@ public class UserDAO implements IUserDAO{
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
 
-            while (rs.next()){
+            while (rs.next()) {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                user = new User(id,name,email,country);
+                user = new User(id, name, email, country);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -105,12 +105,12 @@ public class UserDAO implements IUserDAO{
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                users.add(new User(id,name,email,country));
+                users.add(new User(id, name, email, country));
 
             }
 
@@ -125,7 +125,7 @@ public class UserDAO implements IUserDAO{
         boolean rowDeleted;
         Connection connection = getConnection();
         PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);
-        statement.setInt(1,id);
+        statement.setInt(1, id);
         rowDeleted = statement.executeUpdate() > 0;
         return rowDeleted;
     }
@@ -136,9 +136,9 @@ public class UserDAO implements IUserDAO{
         try {
             Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL);
-            preparedStatement.setString(1,user.getName());
-            preparedStatement.setString(2,user.getEmail());
-            preparedStatement.setString(3,user.getCountry());
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getCountry());
             preparedStatement.setString(4, String.valueOf(user.getId()));
             rowUpdate = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -151,8 +151,8 @@ public class UserDAO implements IUserDAO{
     public List<User> searchUser(String country) {
         listUser.clear();
         List<User> userList = this.selectAllUsers();
-        for (User user : userList){
-            if (user.getCountry().contains(country)){
+        for (User user : userList) {
+            if (user.getCountry().contains(country)) {
                 listUser.add(user);
             }
         }
@@ -183,7 +183,6 @@ public class UserDAO implements IUserDAO{
     @Override
     public void insertUserStore(User user) throws SQLException {
         String query = "{CALL insert_user(?,?,?)}";
-        // try-with-resource statement will auto close the connection.
         try (Connection connection = getConnection();
              CallableStatement callableStatement = connection.prepareCall(query);) {
             callableStatement.setString(1, user.getName());
@@ -257,16 +256,16 @@ public class UserDAO implements IUserDAO{
              PreparedStatement psUpdate = conn.prepareStatement(SQL_UPDATE)) {
             statement.execute(SQL_TABLE_DROP);
             statement.execute(SQL_TABLE_CREATE);
-            psInsert.setString(1, "Quynh");
+            psInsert.setString(1, "Hưng");
             psInsert.setBigDecimal(2, new BigDecimal(10));
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
             psInsert.execute();
-            psInsert.setString(1, "Ngan");
+            psInsert.setString(1, "Lâm");
             psInsert.setBigDecimal(2, new BigDecimal(20));
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
             psInsert.execute();
             psUpdate.setBigDecimal(2, new BigDecimal(999.99));
-            psUpdate.setString(2, "Quynh");
+            psUpdate.setString(2, "Hưng");
             psUpdate.execute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -282,17 +281,17 @@ public class UserDAO implements IUserDAO{
             statement.execute(SQL_TABLE_DROP);
             statement.execute(SQL_TABLE_CREATE);
             conn.setAutoCommit(false); // default true
-            psInsert.setString(1, "Quynh");
+            psInsert.setString(1, "Hưng");
             psInsert.setBigDecimal(2, new BigDecimal(10));
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
             psInsert.execute();
-            psInsert.setString(1, "Ngan");
+            psInsert.setString(1, "Lâm");
             psInsert.setBigDecimal(2, new BigDecimal(20));
             psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
             psInsert.execute();
             psUpdate.setBigDecimal(2, new BigDecimal(999.99));
             psUpdate.setBigDecimal(1, new BigDecimal(999.99));
-            psUpdate.setString(2, "Quynh");
+            psUpdate.setString(2, "Hưng");
             psUpdate.execute();
             conn.commit();
             conn.setAutoCommit(true);
@@ -301,9 +300,7 @@ public class UserDAO implements IUserDAO{
             e.printStackTrace();
 
         }
-
     }
-
 
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {
