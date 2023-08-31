@@ -21,6 +21,7 @@ public interface IUserDAO {
     List<User> search(String country);
 
     User getUserById(int id);
+    List<User> sortByName();
 }
 
 

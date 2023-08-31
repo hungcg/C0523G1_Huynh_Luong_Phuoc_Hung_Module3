@@ -1,8 +1,6 @@
 package com.example.dao;
 
 
-
-
 import com.example.model.User;
 
 import java.sql.*;
@@ -20,6 +18,8 @@ public class UserDAO implements IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+
+    private static final String SORT_BY_NAME = "SELECT * FROM users ORDER BY users.name;";
 
     public UserDAO() {
     }
@@ -61,7 +61,6 @@ public class UserDAO implements IUserDAO {
             preparedStatement.setInt(1, id);
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
-
             while (rs.next()) {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
@@ -149,6 +148,26 @@ public class UserDAO implements IUserDAO {
         } catch (SQLException e) {
         }
         return user;
+    }
+
+    @Override
+    public List<User> sortByName() {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME);) {
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) {
+        }
+        return users;
+
     }
 
 }
